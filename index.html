@@ -5,17 +5,50 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Sunrise Cafe &amp; Bakery | Brunch &amp; Fresh Pastries | Austin, TX</title>
   <meta name="description" content="Sunrise Cafe &amp; Bakery — Austin's favorite brunch spot on South Lamar. Fresh-baked pastries, locally sourced brunch, craft coffee &amp; more. Open daily." />
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="restaurant" />
+  <meta property="og:url" content="https://sunrisecafeatx.netlify.app/" />
+  <meta property="og:title" content="Sunrise Cafe &amp; Bakery | Brunch &amp; Fresh Pastries | Austin, TX" />
+  <meta property="og:description" content="Austin's favorite brunch spot on South Lamar. Fresh-baked pastries, locally sourced brunch, and craft coffee. Open daily." />
+  <meta property="og:image" content="https://sunrisecafeatx.netlify.app/images/hero/cafe-exterior.jpg" />
+  <meta property="og:image:width" content="800" />
+  <meta property="og:image:height" content="600" />
+  <meta property="og:image:alt" content="Sunrise Cafe exterior with fresh pastries and coffee display" />
+  <meta property="og:locale" content="en_US" />
+  <meta property="og:site_name" content="Sunrise Cafe &amp; Bakery" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Sunrise Cafe &amp; Bakery | Brunch &amp; Fresh Pastries | Austin, TX" />
+  <meta name="twitter:description" content="Austin's favorite brunch spot on South Lamar. Fresh-baked pastries, locally sourced brunch, and craft coffee. Open daily." />
+  <meta name="twitter:image" content="https://sunrisecafeatx.netlify.app/images/hero/cafe-exterior.jpg" />
+  <meta name="twitter:image:alt" content="Sunrise Cafe exterior with fresh pastries and coffee display" />
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://sunrisecafeatx.netlify.app/" />
+
   <link rel="stylesheet" href="styles.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet" />
+  <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" as="style" onload="this.onload=null;this.rel='stylesheet'" />
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap" /></noscript>
+  <link rel="preload" as="image" href="/images/hero/cafe-exterior.jpg" />
+  <meta name="theme-color" content="#e8913a" />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" sizes="any" />
+  <link rel="apple-touch-icon" href="/favicon.svg" />
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
+
   <!-- ===================== NAVIGATION ===================== -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Main navigation">
     <div class="nav-container">
       <a href="#hero" class="nav-logo">
-        <span class="logo-icon">&#9728;&#65039;</span>
+        <span class="logo-icon" aria-hidden="true">&#9728;&#65039;</span>
         <span class="logo-text">SUNRISE<span class="logo-accent">CAFE</span></span>
       </a>
       <ul class="nav-links" id="navLinks">
@@ -25,13 +58,14 @@
         <li><a href="#testimonials">Reviews</a></li>
         <li><a href="#hours-location">Visit</a></li>
       </ul>
-      <a href="#menu" class="nav-cta">Order Online</a>
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <a href="https://squareup.com/us/en" class="nav-cta">Order Online</a>
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="navLinks">
         <span></span><span></span><span></span>
       </button>
     </div>
   </nav>
 
+  <main id="main-content">
   <!-- ===================== HERO ===================== -->
   <section class="hero" id="hero">
     <div class="hero-bg-overlay"></div>
@@ -51,21 +85,21 @@
       </div>
       <div class="hero-badges animate-on-scroll">
         <div class="badge">
-          <span class="badge-icon">&#11088;</span>
+          <span class="badge-icon" aria-hidden="true">&#11088;</span>
           <div>
             <strong>4.8</strong>
             <span>Rating</span>
           </div>
         </div>
         <div class="badge">
-          <span class="badge-icon">&#128149;</span>
+          <span class="badge-icon" aria-hidden="true">&#128149;</span>
           <div>
             <strong>200+</strong>
             <span>Reviews</span>
           </div>
         </div>
         <div class="badge">
-          <span class="badge-icon">&#127793;</span>
+          <span class="badge-icon" aria-hidden="true">&#127793;</span>
           <div>
             <strong>Local</strong>
             <span>Sourced</span>
@@ -73,11 +107,10 @@
         </div>
       </div>
     </div>
-    <div class="hero-image-placeholder animate-on-scroll">
-      <div class="placeholder-icon">&#9749;</div>
-      <p>Hero Image &mdash; Cafe Interior or Signature Dish</p>
+    <div class="hero-image animate-on-scroll">
+      <img src="/images/hero/cafe-exterior.webp" alt="Sunrise Cafe exterior with fresh pastries and coffee display" width="800" height="600" fetchpriority="high" />
     </div>
-    <div class="hero-scroll-indicator">
+    <div class="hero-scroll-indicator" aria-hidden="true">
       <span>Scroll</span>
       <div class="scroll-line"></div>
     </div>
@@ -89,10 +122,7 @@
       <div class="about-grid">
         <div class="about-image-col animate-on-scroll">
           <div class="about-image-wrapper">
-            <div class="about-image-placeholder">
-              <div class="placeholder-icon">&#127860;</div>
-              <p>Cafe Photo &mdash; Interior or Team</p>
-            </div>
+            <img src="/images/interior/cafe-interior-cozy.webp" alt="Sunrise Cafe interior with warm lighting and cozy seating" class="about-image" width="600" height="750" loading="lazy" />
             <div class="about-accent-box">
               <span class="accent-number">Est.</span>
               <span class="accent-label">Austin, TX</span>
@@ -116,21 +146,21 @@
           </p>
           <div class="about-features animate-on-scroll">
             <div class="about-feature">
-              <div class="feature-icon">&#127793;</div>
+              <div class="feature-icon" aria-hidden="true">&#127793;</div>
               <div>
                 <strong>Locally Sourced</strong>
                 <p>Texas farms &amp; purveyors</p>
               </div>
             </div>
             <div class="about-feature">
-              <div class="feature-icon">&#129377;</div>
+              <div class="feature-icon" aria-hidden="true">&#129377;</div>
               <div>
                 <strong>Baked Fresh Daily</strong>
                 <p>From-scratch pastries every morning</p>
               </div>
             </div>
             <div class="about-feature">
-              <div class="feature-icon">&#9749;</div>
+              <div class="feature-icon" aria-hidden="true">&#9749;</div>
               <div>
                 <strong>Craft Coffee</strong>
                 <p>Small-batch roasted beans</p>
@@ -152,20 +182,21 @@
       </div>
 
       <!-- Menu Filter Tabs -->
-      <div class="menu-tabs animate-on-scroll">
-        <button class="menu-tab active" data-category="all">All</button>
-        <button class="menu-tab" data-category="brunch">Brunch</button>
-        <button class="menu-tab" data-category="bakery">Bakery</button>
-        <button class="menu-tab" data-category="drinks">Drinks</button>
+      <div class="menu-tabs animate-on-scroll" role="tablist" aria-label="Menu categories">
+        <button type="button" class="menu-tab active" data-category="all" role="tab" aria-selected="true">All</button>
+        <button type="button" class="menu-tab" data-category="brunch" role="tab" aria-selected="false">Brunch</button>
+        <button type="button" class="menu-tab" data-category="bakery" role="tab" aria-selected="false">Bakery</button>
+        <button type="button" class="menu-tab" data-category="drinks" role="tab" aria-selected="false">Drinks</button>
       </div>
 
+      
       <!-- Menu Grid -->
       <div class="menu-grid" id="menuGrid">
 
         <!-- BRUNCH -->
         <div class="menu-card animate-on-scroll" data-category="brunch">
           <div class="menu-card-badge popular">Fan Fave</div>
-          <div class="menu-card-icon">&#129361;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#129361;</div>
           <h3>Avocado Toast</h3>
           <p>Smashed avocado on sourdough with everything seasoning, radish, microgreens &amp; a poached egg.</p>
           <div class="menu-card-footer">
@@ -176,7 +207,7 @@
 
         <div class="menu-card animate-on-scroll" data-category="brunch">
           <div class="menu-card-badge popular">Fan Fave</div>
-          <div class="menu-card-icon">&#127790;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127790;</div>
           <h3>Sunrise Breakfast Tacos</h3>
           <p>Three flour tortillas loaded with scrambled eggs, cheddar, bacon, pico de gallo &amp; house salsa verde.</p>
           <div class="menu-card-footer">
@@ -186,7 +217,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="brunch">
-          <div class="menu-card-icon">&#129374;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#129374;</div>
           <h3>Blueberry Pancake Stack</h3>
           <p>Three fluffy buttermilk pancakes studded with fresh blueberries, whipped butter &amp; warm maple syrup.</p>
           <div class="menu-card-footer">
@@ -196,7 +227,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="brunch">
-          <div class="menu-card-icon">&#127859;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127859;</div>
           <h3>Classic Eggs Benedict</h3>
           <p>Poached eggs over Canadian bacon on a toasted English muffin, topped with house-made hollandaise.</p>
           <div class="menu-card-footer">
@@ -206,7 +237,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="brunch">
-          <div class="menu-card-icon">&#127823;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127823;</div>
           <h3>Overnight Oats Bowl</h3>
           <p>Creamy overnight oats with chia seeds, almond milk, seasonal fruit, honey &amp; toasted granola.</p>
           <div class="menu-card-footer">
@@ -216,7 +247,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="brunch">
-          <div class="menu-card-icon">&#127831;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127831;</div>
           <h3>Chicken &amp; Waffles</h3>
           <p>Crispy buttermilk fried chicken on a Belgian waffle with hot honey drizzle &amp; house-pickled jalape&ntilde;os.</p>
           <div class="menu-card-footer">
@@ -228,7 +259,7 @@
         <!-- BAKERY -->
         <div class="menu-card animate-on-scroll" data-category="bakery">
           <div class="menu-card-badge popular">Fan Fave</div>
-          <div class="menu-card-icon">&#129360;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#129360;</div>
           <h3>Fresh Croissant</h3>
           <p>Flaky, golden, butter-laminated croissant baked fresh every morning. Plain or with chocolate filling.</p>
           <div class="menu-card-footer">
@@ -238,7 +269,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="bakery">
-          <div class="menu-card-icon">&#127856;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127856;</div>
           <h3>Cinnamon Roll</h3>
           <p>Oversized cinnamon roll with brown sugar swirl and tangy cream cheese frosting. Served warm.</p>
           <div class="menu-card-footer">
@@ -248,7 +279,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="bakery">
-          <div class="menu-card-icon">&#127820;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127820;</div>
           <h3>Banana Bread Slice</h3>
           <p>Moist banana bread with walnuts and a hint of cinnamon. Toasted with butter on request.</p>
           <div class="menu-card-footer">
@@ -259,7 +290,7 @@
 
         <!-- DRINKS -->
         <div class="menu-card animate-on-scroll" data-category="drinks">
-          <div class="menu-card-icon">&#9749;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#9749;</div>
           <h3>Latte</h3>
           <p>Double-shot espresso with velvety steamed milk. Available with oat, almond, or whole milk.</p>
           <div class="menu-card-footer">
@@ -269,7 +300,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="drinks">
-          <div class="menu-card-icon">&#129380;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#129380;</div>
           <h3>Cold Brew</h3>
           <p>Slow-steeped 18-hour cold brew, smooth and bold. Served over ice with optional vanilla or caramel.</p>
           <div class="menu-card-footer">
@@ -279,7 +310,7 @@
         </div>
 
         <div class="menu-card animate-on-scroll" data-category="drinks">
-          <div class="menu-card-icon">&#127818;</div>
+          <div class="menu-card-icon" aria-hidden="true">&#127818;</div>
           <h3>Fresh Squeezed OJ</h3>
           <p>Hand-squeezed orange juice made to order. Pure, refreshing, no added sugar &mdash; just sunshine in a glass.</p>
           <div class="menu-card-footer">
@@ -290,7 +321,7 @@
       </div>
 
       <div class="menu-note animate-on-scroll">
-        <p>&#9888;&#65039; Prices may vary. Order online via <strong>Square Online</strong> for pickup or delivery.</p>
+        <p><span aria-hidden="true">&#9888;&#65039;</span> Prices may vary. Order online via <strong>Square Online</strong> for pickup or delivery.</p>
       </div>
     </div>
   </section>
@@ -301,44 +332,27 @@
       <div class="section-header">
         <span class="section-tag animate-on-scroll">The Vibe</span>
         <h2 class="section-title animate-on-scroll">Morning Vibes &amp; Fresh Bakes</h2>
-        <p class="section-desc animate-on-scroll">Follow us <strong>@sunrisecafeatx</strong> on Instagram for daily specials, behind-the-scenes baking &amp; more.</p>
+        <p class="section-desc animate-on-scroll">Follow us <strong>@sunrisecafeatx</strong> on Instagram for daily
+          specials, behind-the-scenes baking &amp; more.</p>
       </div>
-      <div class="gallery-grid animate-on-scroll">
-        <div class="gallery-item gallery-large">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #E8913A, #F4D03F);">
-            <span>&#129360;</span>
-            <p>Fresh Croissants &amp; Pastries</p>
-          </div>
+      <div class="gallery-grid">
+        <div class="gallery-item gallery-large animate-on-scroll">
+          <img src="/images/menu_bakery/croissants.webp" alt="Fresh Croissants &amp; Pastries" width="800" height="533" loading="lazy" />
         </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #2C3E50, #5D6D7E);">
-            <span>&#9749;</span>
-            <p>Latte Art &amp; Craft Coffee</p>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <img src="/images/menu_drinks/latte-art.webp" alt="Latte Art &amp; Craft Coffee" width="600" height="400" loading="lazy" />
         </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #F4D03F, #E8913A);">
-            <span>&#129361;</span>
-            <p>Avocado Toast Plated</p>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <img src="/images/menu_brunch/avocado-toast.webp" alt="Avocado Toast Plated" width="600" height="400" loading="lazy" />
         </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #27AE60, #2ECC71);">
-            <span>&#127793;</span>
-            <p>Local Farm Ingredients</p>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <img src="/images/gallery/fresh-produce-market.webp" alt="Local Farm Ingredients" width="600" height="400" loading="lazy" />
         </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #8E44AD, #BB8FCE);">
-            <span>&#129374;</span>
-            <p>Blueberry Pancake Stack</p>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <img src="/images/menu_brunch/blueberry-pancakes.webp" alt="Blueberry Pancake Stack" width="600" height="400" loading="lazy" />
         </div>
-        <div class="gallery-item">
-          <div class="gallery-placeholder" style="background: linear-gradient(135deg, #E74C3C, #F39C12);">
-            <span>&#127860;</span>
-            <p>Sunny Cafe Interior</p>
-          </div>
+        <div class="gallery-item animate-on-scroll">
+          <img src="/images/interior/cafe-interior-rustic.webp" alt="Rustic wooden interior seating area inside Sunrise Cafe in Austin" width="600" height="400" loading="lazy" />
         </div>
       </div>
     </div>
@@ -354,7 +368,55 @@
       <div class="testimonial-slider" id="testimonialSlider">
         <div class="testimonial-track" id="testimonialTrack">
           <div class="testimonial-card">
-            <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
+            <p>&ldquo;The Customer service here was awesoume &mdash; no complaints and their coffee is amazing!&rdquo;</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">S</div>
+              <div>
+                <strong>Sarah J.</strong>
+                <span>via Yelp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
+            <p>&ldquo;Great coffee shop, even the Parks brand coffee guy stops here in the morning.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div>
+                <strong>Robert T.</strong>
+                <span>via Yelp</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
+            <p>&ldquo;I would highly recommend this place for small meetings and small bible studies.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">B</div>
+              <div>
+                <strong>Barry A.</strong>
+                <span>via Google</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
+            <p>&ldquo;I enjoyed visiting this location each morning on my way to work.</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">J</div>
+              <div>
+                <strong>Jazmyn U.</strong>
+                <span>via Google</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
             <p>&ldquo;The croissants here are on another level &mdash; buttery, flaky, and perfectly golden. I come here every Saturday morning and it never disappoints. Best bakery in Austin!&rdquo;</p>
             <div class="testimonial-author">
               <div class="author-avatar">M</div>
@@ -365,7 +427,7 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
             <p>&ldquo;The Sunrise Breakfast Tacos are the real deal. Perfectly seasoned eggs, crispy bacon, and that house salsa verde is addictive. This is my go-to brunch spot now.&rdquo;</p>
             <div class="testimonial-author">
               <div class="author-avatar">J</div>
@@ -376,7 +438,7 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="stars">&#11088;&#11088;&#11088;&#11088;&#11088;</div>
+            <div class="stars" aria-label="5 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;&#11088;</span></div>
             <p>&ldquo;Finally a cafe that gets oat milk lattes right! The coffee is smooth, the overnight oats bowl is gorgeous, and the whole space just feels warm and inviting.&rdquo;</p>
             <div class="testimonial-author">
               <div class="author-avatar">P</div>
@@ -387,7 +449,7 @@
             </div>
           </div>
           <div class="testimonial-card">
-            <div class="stars">&#11088;&#11088;&#11088;&#11088;</div>
+            <div class="stars" aria-label="4 out of 5 stars"><span aria-hidden="true">&#11088;&#11088;&#11088;&#11088;</span></div>
             <p>&ldquo;Great vibes and really solid food. The chicken and waffles blew me away. Only wish they were open a bit later on weekdays. Definitely worth the visit!&rdquo;</p>
             <div class="testimonial-author">
               <div class="author-avatar">D</div>
@@ -399,9 +461,9 @@
           </div>
         </div>
         <div class="testimonial-controls">
-          <button class="testimonial-btn" id="prevBtn" aria-label="Previous review">&#8592;</button>
-          <div class="testimonial-dots" id="testimonialDots"></div>
-          <button class="testimonial-btn" id="nextBtn" aria-label="Next review">&#8594;</button>
+          <button type="button" class="testimonial-btn" id="prevBtn" aria-label="Previous review">&#8592;</button>
+          <div class="testimonial-dots" id="testimonialDots" role="tablist" aria-label="Testimonial navigation"></div>
+          <button type="button" class="testimonial-btn" id="nextBtn" aria-label="Next review">&#8594;</button>
         </div>
       </div>
     </div>
@@ -414,17 +476,17 @@
         <span class="section-tag animate-on-scroll">Visit Us</span>
         <h2 class="section-title animate-on-scroll">Come Hungry, Leave Happy</h2>
       </div>
-      <div class="find-us-grid">
-        <div class="find-us-info animate-on-scroll">
+      <div class="hours-grid">
+        <div class="hours-info animate-on-scroll">
           <div class="info-card">
-            <div class="info-icon">&#128205;</div>
+            <div class="info-icon" aria-hidden="true">&#128205;</div>
             <div>
               <h3>Location</h3>
               <p>2847 S Lamar Blvd<br />Austin, TX 78704<br /><em>South Lamar Neighborhood</em></p>
             </div>
           </div>
           <div class="info-card">
-            <div class="info-icon">&#128337;</div>
+            <div class="info-icon" aria-hidden="true">&#128337;</div>
             <div>
               <h3>Hours</h3>
               <p>
@@ -436,7 +498,7 @@
             </div>
           </div>
           <div class="info-card">
-            <div class="info-icon">&#128222;</div>
+            <div class="info-icon" aria-hidden="true">&#128222;</div>
             <div>
               <h3>Contact</h3>
               <p>
@@ -446,7 +508,7 @@
             </div>
           </div>
           <div class="info-card">
-            <div class="info-icon">&#128230;</div>
+            <div class="info-icon" aria-hidden="true">&#128230;</div>
             <div>
               <h3>Order Online</h3>
               <p>Pickup &amp; delivery available via Square Online</p>
@@ -456,8 +518,11 @@
         <div class="find-us-map animate-on-scroll">
           <div class="map-container">
             <div class="map-placeholder">
-              <div class="placeholder-icon">&#128506;</div>
-              <p>Google Maps Embed<br /><small>2847 S Lamar Blvd, Austin, TX 78704</small></p>
+              <div class="map-container">
+                <iframe src="https://www.google.com/maps?q=2847+S+Lamar+Blvd+Austin+TX+78704&output=embed" title="Google Maps showing Sunrise Cafe location at 2847 S Lamar Blvd Austin TX" width="100%" height="625"
+                  style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+              </div>
             </div>
           </div>
         </div>
@@ -471,16 +536,19 @@
       <div class="newsletter-inner animate-on-scroll">
         <h2>Stay in the Loop</h2>
         <p>Weekly specials, seasonal menu drops, and bakery pre-orders &mdash; straight to your inbox.</p>
-        <form class="newsletter-form" id="newsletterForm">
-          <input type="email" placeholder="Your email address" required aria-label="Email address" />
+        <form class="newsletter-form" id="newsletterForm" action="https://formspree.io/f/{form_id}" method="post">
+          <label for="email" class="sr-only">Email address</label>
+          <input name="Email" id="email" type="email" placeholder="Your email address" required autocomplete="email">
           <button type="submit" class="btn btn-primary">Subscribe</button>
         </form>
         <div class="newsletter-links">
-          <a href="#" class="btn btn-outline" target="_blank" rel="noopener">Order on Square Online</a>
+          <a href="https://squareup.com/us/en" class="btn btn-outline" target="_blank" rel="noopener">Order on Square Online</a>
         </div>
       </div>
     </div>
   </section>
+
+  </main>
 
   <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
@@ -488,18 +556,18 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo">
-            <span class="logo-icon">&#9728;&#65039;</span>
+            <span class="logo-icon" aria-hidden="true">&#9728;&#65039;</span>
             <span class="logo-text">SUNRISE<span class="logo-accent">CAFE</span></span>
           </div>
           <p>Fresh-baked pastries, locally sourced brunch, and craft coffee on South Lamar. Austin&rsquo;s favorite morning spot.</p>
           <div class="footer-social">
-            <a href="#" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
+            <a href="https://www.instagram.com/sunrise-cafe-austin/" target="_blank" rel="noopener" aria-label="Instagram" class="social-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5"/></svg>
             </a>
-            <a href="#" target="_blank" rel="noopener" aria-label="Yelp" class="social-link">
+            <a href="https://www.yelp.com/biz/sunrise-cafe-austin" target="_blank" rel="noopener" aria-label="Yelp" class="social-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
             </a>
-            <a href="#" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
+            <a href="https://www.facebook.com/sunrise-cafe-austin" target="_blank" rel="noopener" aria-label="Facebook" class="social-link">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
             </a>
             <a href="tel:5125550147" aria-label="Phone" class="social-link">
@@ -508,7 +576,8 @@
           </div>
         </div>
         <div class="footer-links-col">
-          <h4>Quick Links</h4>
+          <nav aria-label="Footer navigation">
+          <h3>Quick Links</h3>
           <ul>
             <li><a href="#about">About Us</a></li>
             <li><a href="#menu">Menu</a></li>
@@ -516,13 +585,14 @@
             <li><a href="#testimonials">Reviews</a></li>
             <li><a href="#hours-location">Visit Us</a></li>
           </ul>
+          </nav>
         </div>
         <div class="footer-links-col">
-          <h4>Order Online</h4>
+          <h3>Order Online</h3>
           <ul>
             <li><a href="#" target="_blank" rel="noopener">Square Online</a></li>
           </ul>
-          <h4 style="margin-top: 1.5rem;">Contact</h4>
+          <h3 style="margin-top: 1.5rem;">Contact</h3>
           <ul>
             <li><a href="tel:5125550147">(512) 555-0147</a></li>
             <li>2847 S Lamar Blvd, Austin</li>
@@ -535,6 +605,6 @@
     </div>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="script.js" defer></script>
 </body>
 </html>

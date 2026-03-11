@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <!-- Background -->
+  <rect width="32" height="32" rx="6" fill="#e8913a"/>
+  <!-- Sun rays (top arc) -->
+  <line x1="16" y1="4" x2="16" y2="7" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="23.5" y1="6.5" x2="21.4" y2="8.6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="8.5" y1="6.5" x2="10.6" y2="8.6" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="26" y1="14" x2="23" y2="14" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <line x1="6" y1="14" x2="9" y2="14" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Sun half-circle (rising) -->
+  <path d="M 9 18 A 7 7 0 0 1 23 18 Z" fill="#fff"/>
+  <!-- Horizon line -->
+  <line x1="6" y1="19" x2="26" y2="19" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+  <!-- Cup base (subtle) -->
+  <rect x="11" y="22" width="10" height="2" rx="1" fill="#fff" opacity="0.7"/>
+  <rect x="12.5" y="24" width="7" height="1.5" rx="0.75" fill="#fff" opacity="0.5"/>
+</svg>
